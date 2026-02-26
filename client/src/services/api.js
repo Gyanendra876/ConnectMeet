@@ -1,4 +1,4 @@
-const API_URL = "https://connectmeet-server.onrender.com";
+const API_URL = "https://connectmeet-server.onrender.com/api";
 // token header helper
 export const getTokenHeader = () => {
   const token = localStorage.getItem("token");
