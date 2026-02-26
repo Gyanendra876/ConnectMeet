@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "https://connectmeet-frontend.onrender.com",
+    origin: "https://connectmeet-client.onrender.com",
     credentials: true,
   })
 );
@@ -49,7 +49,7 @@ app.get("/", (req, res) => {
 ========================= */
 const io = new Server(server, {
   cors: {
-    origin: "https://connectmeet-frontend.onrender.com",
+    origin: "https://connectmeet-client.onrender.com",
   },
 });
 
