@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { getData, postData } from "../services/api";
 import meetingImg from "../assets/Manage.png";
 
-
 function Manage() {
   const navigate = useNavigate();
   const [Id, setId] = useState("");
@@ -54,9 +53,18 @@ function Manage() {
     }
   }
 
-  
+  // 🔴 Logout Function
+  async function handleLogout() {
+    try {
+      await postData("auth/logout"); 
+      localStorage.removeItem("token"); 
+      navigate("/",{ replace: true });
+    } catch (err) {
+      console.log("Logout error");
+    }
+  }
 
- return (
+  return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 overflow-hidden">
 
       {/* Background Glow */}
@@ -71,7 +79,14 @@ function Manage() {
         <h1 className="text-3xl font-bold tracking-wide text-gray-900">
           Connect<span className="text-blue-600">Meet</span>
         </h1>
-       
+
+        {/* Logout Button */}
+        <button
+          onClick={handleLogout}
+          className="px-5 py-2 bg-red-500 hover:bg-red-600 text-white rounded-xl shadow-md transition"
+        >
+          Logout
+        </button>
       </header>
 
       {/* Hero Section */}
