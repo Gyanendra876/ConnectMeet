@@ -43,6 +43,9 @@ app.use("/api/lobby", require("./routes/lobbyRoutes"));
 app.get("/", (req, res) => {
   res.send("Server Running...");
 });
+app.get("/ping", (req, res) => {
+  res.send("ok");
+});
 
 /* =========================
    SOCKET SETUP
