@@ -1,1 +1,6 @@
 .env
+node_modules
+client/src/assets/*.zip
+client/src/assets/*.mkv
+client/src/assets/*.pdf
+client/src/assets/*.docx
