@@ -1,4 +1,4 @@
-🎥 ConnectMeet – Real-Time Video Conferencing Platform
+ ConnectMeet – Real-Time Video Conferencing Platform
 
 ConnectMeet is a full-stack real-time video conferencing application built using WebRTC and Socket.io. It enables secure multi-user meetings with live video/audio streaming, screen sharing, and real-time chat.
 
